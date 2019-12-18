@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta charset="UTF-8">
+<script>
+function getRandomNum(maxNumber) {
+    return Math.floor(Math.random() * maxNumber);
+}
+function getUrlList() {
+    var urls = [
+        "https://zh.surveymonkey.com/r/LKWFCGV",
+        "https://zh.surveymonkey.com/r/LKM93GG",
+        "https://zh.surveymonkey.com/r/LKXSRM6",
+        "https://zh.surveymonkey.com/r/LKFLDPH",
+        "https://zh.surveymonkey.com/r/LK39TSM",
+    ];
+    return urls;
+}
+function getRandomUrl() {
+    let urls = getUrlList();
+    let maxNumber = urls.length;
+    let randomNum = getRandomNum(maxNumber);
+    let element = document.getElementById("text")
+    element.href = element.text = urls[randomNum];
+}
+</script>
+</head>
+
+<body>
+<button onclick="getRandomUrl()">隨機問卷產生</button>
+<br/>
+<a href="" id="text"></a>
+<p>如果已經問卷已經填寫過，請再按一次按鈕</p>
+</body>
+</html>
+
